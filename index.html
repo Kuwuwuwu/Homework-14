@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="bg-primary text-white py-4">
+        <nav class="container">
+            <ul class="nav justify-content-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Головна</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Submenu 1</a>
+                        <a class="dropdown-item" href="#">Submenu 2</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Про нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- LEFT COLUMN (SLIDER) -->
+            <div class="col-md-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/image1.jpg" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/image2.jpg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/image3.jpg" class="d-block w-100" alt="Image 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Попередній</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Наступний</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MAIN COLUMN (Accordion) -->
+            <main class="col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Розділ 1
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                In sollicitudin ornare orci sit amet ultricies. Pellentesque habitant morbi tristique
+                                senectus et netus et malesuada
+                                fames ac turpis egestas. Etiam suscipit metus ex, ac posuere ligula egestas ut. Ut
+                                condimentum suscipit augue. Nam eu
+                                pulvinar dui, eget eleifend neque. Vestibulum consequat fermentum mi rhoncus fringilla.
+                                Nullam sodales lacus a eros
+                                venenatis, at condimentum libero posuere. Ut cursus ex eu dui porta, eget facilisis est
+                                egestas. Suspendisse consequat,
+                                nibh euismod mollis porta, ligula elit sodales mi, id consequat massa eros et sapien.
+                                Suspendisse ac placerat eros.
+                                Phasellus pulvinar imperdiet nisl id auctor. Donec nec ultricies libero. Donec nec
+                                gravida tortor. Aliquam pellentesque
+                                metus placerat lorem mollis hendrerit. Fusce feugiat ligula ut augue accumsan, et
+                                venenatis leo consequat. Phasellus
+                                malesuada dolor non venenatis tincidunt.
+
+                                <!-- Вложенный аккордеон -->
+                                <div class="accordion mt-3" id="nestedAccordionOne">
+                                    <div class="card">
+                                        <div class="card-header" id="nestedHeadingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#nestedCollapseOne" aria-expanded="true"
+                                                    aria-controls="nestedCollapseOne">
+                                                    Вложений Розділ 1.1
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="nestedCollapseOne" class="collapse show"
+                                            aria-labelledby="nestedHeadingOne" data-parent="#nestedAccordionOne">
+                                            <div class="card-body">
+                                                In sollicitudin ornare orci sit amet ultricies. Pellentesque habitant
+                                                morbi tristique senectus et netus et malesuada
+                                                fames ac turpis egestas. Etiam suscipit metus ex, ac posuere ligula
+                                                egestas ut. Ut condimentum suscipit augue. Nam eu
+                                                pulvinar dui, eget eleifend neque. Vestibulum consequat fermentum mi
+                                                rhoncus fringilla. Nullam sodales lacus a eros
+                                                venenatis, at condimentum libero posuere. Ut cursus ex eu dui porta,
+                                                eget facilisis est egestas. Suspendisse consequat,
+                                                nibh euismod mollis porta, ligula elit sodales mi, id consequat massa
+                                                eros et sapien. Suspendisse ac placerat eros.
+                                                Phasellus pulvinar imperdiet nisl id auctor. Donec nec ultricies libero.
+                                                Donec nec gravida tortor. Aliquam pellentesque
+                                                metus placerat lorem mollis hendrerit. Fusce feugiat ligula ut augue
+                                                accumsan, et venenatis leo consequat. Phasellus
+                                                malesuada dolor non venenatis tincidunt.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" id="nestedHeadingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#nestedCollapseTwo" aria-expanded="false"
+                                                    aria-controls="nestedCollapseTwo">
+                                                    Вложений Розділ 1.2
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="nestedCollapseTwo" class="collapse" aria-labelledby="nestedHeadingTwo"
+                                            data-parent="#nestedAccordionOne">
+                                            <div class="card-body">
+                                                In sollicitudin ornare orci sit amet ultricies. Pellentesque habitant
+                                                morbi tristique senectus et netus et malesuada
+                                                fames ac turpis egestas. Etiam suscipit metus ex, ac posuere ligula
+                                                egestas ut. Ut condimentum suscipit augue. Nam eu
+                                                pulvinar dui, eget eleifend neque. Vestibulum consequat fermentum mi
+                                                rhoncus fringilla. Nullam sodales lacus a eros
+                                                venenatis, at condimentum libero posuere. Ut cursus ex eu dui porta,
+                                                eget facilisis est egestas. Suspendisse consequat,
+                                                nibh euismod mollis porta, ligula elit sodales mi, id consequat massa
+                                                eros et sapien. Suspendisse ac placerat eros.
+                                                Phasellus pulvinar imperdiet nisl id auctor. Donec nec ultricies libero.
+                                                Donec nec gravida tortor. Aliquam pellentesque
+                                                metus placerat lorem mollis hendrerit. Fusce feugiat ligula ut augue
+                                                accumsan, et venenatis leo consequat. Phasellus
+                                                malesuada dolor non venenatis tincidunt.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link text-dark" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Розділ 2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Вміст розділу 2.
+
+                                <!-- Вложенный аккордеон для раздела 2 -->
+                                <div class="accordion mt-3" id="nestedAccordionTwo">
+                                    <div class="card">
+                                        <div class="card-header" id="nestedHeadingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#nestedCollapseThree" aria-expanded="true"
+                                                    aria-controls="nestedCollapseThree">
+                                                    Вложений Розділ 2.1
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="nestedCollapseThree" class="collapse show"
+                                            aria-labelledby="nestedHeadingThree" data-parent="#nestedAccordionTwo">
+                                            <div class="card-body">
+                                                Donec fermentum, est sit amet venenatis fermentum, turpis ante maximus
+                                                tortor, nec consectetur orci lorem id elit. Morbi
+                                                mi purus, volutpat sed malesuada sit amet, porttitor sed mi. Vestibulum
+                                                maximus sem id congue accumsan. Maecenas
+                                                molestie id orci nec cursus. Donec urna eros, sollicitudin et malesuada
+                                                id, molestie aliquet ipsum. Proin interdum lacus
+                                                a ipsum facilisis, vulputate faucibus dolor tincidunt. Nulla eleifend
+                                                erat et orci fermentum auctor. Ut magna dui,
+                                                efficitur a tristique a, lacinia eu mauris. Vestibulum ante ipsum primis
+                                                in faucibus orci luctus et ultrices posuere
+                                                cubilia curae; In ligula est, vestibulum eget augue ac, convallis
+                                                feugiat nunc. Quisque sed lorem facilisis, scelerisque
+                                                purus ornare, feugiat lacus. Sed facilisis aliquet risus id malesuada.
+                                                Cras iaculis risus nec rutrum ornare. Curabitur
+                                                at massa ligula. Curabitur nec bibendum quam.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" id="nestedHeadingFour">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                    data-target="#nestedCollapseFour" aria-expanded="false"
+                                                    aria-controls="nestedCollapseFour">
+                                                    Вложений Розділ 2.2
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="nestedCollapseFour" class="collapse"
+                                            aria-labelledby="nestedHeadingFour" data-parent="#nestedAccordionTwo">
+                                            <div class="card-body">
+                                                Donec fermentum, est sit amet venenatis fermentum, turpis ante maximus
+                                                tortor, nec consectetur orci lorem id elit. Morbi
+                                                mi purus, volutpat sed malesuada sit amet, porttitor sed mi. Vestibulum
+                                                maximus sem id congue accumsan. Maecenas
+                                                molestie id orci nec cursus. Donec urna eros, sollicitudin et malesuada
+                                                id, molestie aliquet ipsum. Proin interdum lacus
+                                                a ipsum facilisis, vulputate faucibus dolor tincidunt. Nulla eleifend
+                                                erat et orci fermentum auctor. Ut magna dui,
+                                                efficitur a tristique a, lacinia eu mauris. Vestibulum ante ipsum primis
+                                                in faucibus orci luctus et ultrices posuere
+                                                cubilia curae; In ligula est, vestibulum eget augue ac, convallis
+                                                feugiat nunc. Quisque sed lorem facilisis, scelerisque
+                                                purus ornare, feugiat lacus. Sed facilisis aliquet risus id malesuada.
+                                                Cras iaculis risus nec rutrum ornare. Curabitur
+                                                at massa ligula. Curabitur nec bibendum quam.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- RIGHT COLUMN (Useful Links) -->
+            <aside class="col-md-3">
+                <h2 class="h4">Корисні посилання</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://www.youtube.com/watch?v=BHACKCNDMW8">Link</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <section class="container mt-5">
+        <h2>Контактна форма</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Электронна пошта:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Повідомлення:</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-lg mt-3">Відправити</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>© 2025 Ваш сайт</p>
+        <p>Всі права захищені</p>
+    </footer>
+
+    <!-- Подключаем Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
