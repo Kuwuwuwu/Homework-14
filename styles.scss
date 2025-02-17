@@ -1,173 +1,181 @@
 @import "variables";
 @import "mixins";
 
+// Body Styles
 body {
-    font-family: "Arial", sans-serif;
-    background-color: #f8f9fa;
+    font-family: $font-family;
+    background-color: $light-color;
     margin: 0;
     padding: 0;
 }
 
-h2,
-h3 {
-    font-weight: bold;
-    color: #333;
+// Header Styles
+header {
+    background-color: $primary-color;
+    border-bottom: 4px solid $secondary-color;
+    padding: 20px 0;
+
+    nav {
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $accent-color !important;
+            }
+        }
+
+        .nav-item.dropdown {
+            .dropdown-menu {
+                background-color: $secondary-color;
+                border-radius: 0;
+            }
+
+            .dropdown-item {
+                color: white;
+
+                &:hover {
+                    background-color: darken($secondary-color, 5%);
+                }
+            }
+        }
+    }
 }
 
+// Footer Styles
 footer {
-    background-color: #333;
+    background-color: $secondary-color;
     color: white;
     padding: 15px 0;
     margin-top: 30px;
     font-size: 14px;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
-footer p {
-    margin-bottom: 0;
-}
-
-/* HEADER */
-header {
-    background-color: #007bff;
-    border-bottom: 4px solid #0056b3;
-    padding: 20px 0;
-}
-
-header nav .nav-link {
-    color: white !important;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-header nav .nav-link:hover {
-    color: #ffc107 !important;
-}
-
-header .nav-item.dropdown .dropdown-menu {
-    background-color: #0056b3;
-    border-radius: 0;
-}
-
-header .nav-item.dropdown .dropdown-item {
-    color: white;
-}
-
-header .nav-item.dropdown .dropdown-item:hover {
-    background-color: #0069d9;
-}
-
-/* CAROUSEL (SLIDER) */
-.carousel-item img {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+// Carousel Styles
+.carousel-item {
+    img {
+        height: 300px;
+        object-fit: cover;
+        @include border-radius($border-radius);
+    }
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    color: #007bff;
+    color: $primary-color;
 }
 
-/* MAIN CONTENT */
+// Main Content Styles
 main {
     background-color: white;
-    border-radius: 10px;
+    @include border-radius($border-radius);
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    @include box-shadow;
 }
 
-.accordion .card {
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.accordion {
+    .card {
+        @include border-radius($border-radius);
+        margin-bottom: 15px;
+        border: none;
+        @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+
+        .card-header {
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .card-body {
+            background-color: #fafafa;
+        }
+    }
 }
 
-.accordion .card-header {
-    background-color: #f1f1f1;
-    border-bottom: 2px solid #ddd;
-}
-
-.accordion .card-body {
-    background-color: #fafafa;
-}
-
-/* RIGHT COLUMN */
+// Right Column Styles
 aside {
     background-color: white;
-    border-radius: 10px;
+    @include border-radius($border-radius);
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    @include box-shadow;
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .list-group {
+        li {
+            background-color: $light-color;
+            @include border-radius(5px);
+            margin-bottom: 10px;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
 }
 
-aside h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-ul.list-group li {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-ul.list-group li a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-ul.list-group li a:hover {
-    color: #0056b3;
-}
-
-/* FORM */
+// Form Styles
 form {
     background-color: white;
-    border-radius: 10px;
+    @include border-radius($border-radius);
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    @include box-shadow;
+
+    .form-group {
+        label {
+            font-weight: bold;
+            color: $dark-color;
+        }
+    }
+
+    .form-control {
+        @include border-radius(5px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        }
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        @include border-radius(5px);
+        width: 100%;
+        font-size: 16px;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
 }
 
-form .form-group label {
-    font-weight: bold;
-    color: #333;
-}
-
-form .form-control {
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-/* Aдаптивность */
+// Responsive Styles (Media Queries)
 @media (max-width: 992px) {
     .carousel-item img {
         height: 250px;
     }
 
-    .main,
+    main,
     aside {
         margin-top: 20px;
     }
