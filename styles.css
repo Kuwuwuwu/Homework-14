@@ -1,162 +1,101 @@
+/* Общие стили */
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Стили для header */
 header {
-  background-color: #007bff;
-  border-bottom: 4px solid #0056b3;
-  padding: 20px 0;
-}
-header nav .nav-link {
-  color: white !important;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-header nav .nav-link:hover {
-  color: #ffc107 !important;
-}
-header nav .nav-item.dropdown .dropdown-menu {
-  background-color: #0056b3;
-  border-radius: 0;
-}
-header nav .nav-item.dropdown .dropdown-item {
-  color: white;
-  transition: background-color 0.3s ease;
-}
-header nav .nav-item.dropdown .dropdown-item:hover {
-  background-color: #004a9a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background-color: #0056b3;
-  color: white;
-  padding: 15px 0;
-  margin-top: 30px;
-  font-size: 14px;
-  text-align: center;
-}
-footer p {
-  margin-bottom: 0;
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.carousel-item img {
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
+.nav-link:hover {
+    color: #ffc107 !important;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  color: #007bff;
+
+/* Стили для карусели */
+.carousel-inner img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
-main {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Основной контент */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.accordion .card {
-  border-radius: 10px;
-  margin-bottom: 15px;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-.accordion .card .card-header {
-  background-color: #f1f1f1;
-  border-bottom: 2px solid #ddd;
-}
-.accordion .card .card-body {
-  background-color: #fafafa;
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
 }
 
-aside {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-aside h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-aside .list-group li {
-  background-color: #f8f9fa;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: all 0.3s ease;
-}
-aside .list-group li a {
-  text-decoration: none;
-  color: #007bff;
-  transition: color 0.3s ease;
-}
-aside .list-group li a:hover {
-  color: #0056b3;
+.btn-link {
+    text-decoration: none;
+    font-weight: bold;
 }
 
+/* Стили для контактной формы */
 form {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-form .form-group label {
-  font-weight: bold;
-  color: #333;
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
 }
-form .form-control {
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+
+.btn-success:hover {
+    background-color: #218838;
 }
-form .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+
+/* Адаптивность навигации */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-form button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 16px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+
+/* Адаптация формы для мобильных устройств */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
 }
-form button:hover {
-  background-color: #0056b3;
+
+/* Стили для footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Общие адаптивные стили */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 @media (max-width: 992px) {
-  .carousel-item img {
-    height: 250px;
-  }
-  main,
-  aside {
-    margin-top: 20px;
-  }
+    .container {
+        padding: 10px;
+    }
 }
-@media (max-width: 576px) {
-  .carousel-item img {
-    height: 200px;
-  }
-  .carousel-inner img {
-    height: auto;
-  }
-  .col-md-6,
-  .col-md-3 {
-    padding: 10px;
-  }
-}/*# sourceMappingURL=styles.css.map */
