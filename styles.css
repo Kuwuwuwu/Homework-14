@@ -14,6 +14,7 @@ header nav .nav-link {
   color: white !important;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 header nav .nav-link:hover {
   color: #ffc107 !important;
@@ -24,6 +25,7 @@ header nav .nav-item.dropdown .dropdown-menu {
 }
 header nav .nav-item.dropdown .dropdown-item {
   color: white;
+  transition: background-color 0.3s ease;
 }
 header nav .nav-item.dropdown .dropdown-item:hover {
   background-color: #004a9a;
@@ -35,6 +37,7 @@ footer {
   padding: 15px 0;
   margin-top: 30px;
   font-size: 14px;
+  text-align: center;
 }
 footer p {
   margin-bottom: 0;
@@ -64,6 +67,7 @@ main {
   margin-bottom: 15px;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 .accordion .card .card-header {
   background-color: #f1f1f1;
@@ -88,10 +92,12 @@ aside .list-group li {
   background-color: #f8f9fa;
   border-radius: 5px;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 aside .list-group li a {
   text-decoration: none;
   color: #007bff;
+  transition: color 0.3s ease;
 }
 aside .list-group li a:hover {
   color: #0056b3;
@@ -112,6 +118,7 @@ form .form-control {
   padding: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 form .form-control:focus {
   border-color: #007bff;
@@ -126,6 +133,7 @@ form button {
   width: 100%;
   font-size: 16px;
   margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 form button:hover {
   background-color: #0056b3;
